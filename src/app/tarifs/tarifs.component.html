@@ -1,0 +1,25 @@
+<div class="section-container tarifs-section">
+  <h2>Tarifs</h2>
+
+  <table mat-table [dataSource]="tarifsData" class="mat-elevation-z2 tarifs-table">
+
+    <!-- Service Column -->
+    <ng-container matColumnDef="service">
+      <th mat-header-cell *matHeaderCellDef> Prestation </th>
+      <td mat-cell *matCellDef="let element"> {{element.service}} </td>
+    </ng-container>
+
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Tarif </th>
+      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <p class="disclaimer">
+    Ces soins ne sont pas remboursés par la Sécurité Sociale. En revanche, de plus en plus de mutuelles participent à la prise en charge des bilans et des suivis psychologiques. Un bilan neuropsychologique s'apparente à plusieurs consultations auprès d'un psychologue diplômé d'état.
+  </p>
+</div>

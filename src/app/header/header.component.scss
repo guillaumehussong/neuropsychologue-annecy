@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  position: sticky; // Make header sticky
+  top: 0;
+  z-index: 1000; // Ensure header stays on top
+}
+
+.app-header {
+  background-color: #f8f9fa; // Light gray background like the screenshot
+  color: #333; // Dark text color for contrast
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow
+
+  // Adjust padding if necessary
+  padding: 0 1rem; // Example padding
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-links {
+  button {
+    color: #333; // Match text color
+    font-weight: 500; // Slightly bolder text
+    margin: 0 0.5rem; // Spacing between links
+    text-transform: none; // Prevent uppercase default
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04); // Subtle hover effect
+    }
+
+    // Add styling for active link if needed later
+    // &.active {
+    //   color: blue; // Example active color
+    // }
+  }
+}
+
+// Optional: Responsive adjustments
+@media (max-width: 768px) {
+  .nav-links {
+    // Example: Hide text, show icons, or stack links
+    button {
+      margin: 0 0.2rem;
+      font-size: 0.9rem; // Smaller font on smaller screens
+    }
+  }
+}
